@@ -53,8 +53,7 @@ bool tempMode = false;
 int temperature = 0;
 int humidity = 0;
 
-/* WiFi SSID & Password*/
-
+/* WiFi SSID & Password are in secret_keys.hpp*/
 
 void setup() {
   // set up the LCD's number of columns and rows:
