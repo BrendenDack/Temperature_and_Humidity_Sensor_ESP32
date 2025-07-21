@@ -213,8 +213,16 @@ String SendHTML(int TempCstat, int Humiditystat){
    ptr +="</div>\n";
    ptr +="<div class=\"side-by-side temperature-text\">Temperature</div>\n";
    ptr +="<div class=\"side-by-side temperature\">";
-   ptr +=(int)TempCstat;
-   ptr +="<span class=\"superscript\">°C</span></div>\n";
+   if (tempMode == true) {
+    int temp = ((TempCstat * 9)/5) + 32;
+    ptr += temp;
+    ptr +="<span class=\"superscript\">°F</span></div>\n";
+   }
+   else {
+    ptr +=TempCstat;
+    ptr +="<span class=\"superscript\">°C</span></div>\n";
+   }
+  
    ptr +="</div>\n";
    ptr +="<div class=\"data\">\n";
    ptr +="<div class=\"side-by-side humidity-icon\">\n";
@@ -225,7 +233,7 @@ String SendHTML(int TempCstat, int Humiditystat){
    ptr +="</div>\n";
    ptr +="<div class=\"side-by-side humidity-text\">Humidity</div>\n";
    ptr +="<div class=\"side-by-side humidity\">";
-   ptr +=(int)Humiditystat;
+   ptr +=Humiditystat;
    ptr +="<span class=\"superscript\">%</span></div>\n";
    ptr +="</div>\n";
 

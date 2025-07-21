@@ -2,6 +2,7 @@
 
 This project uses an esp32doit-devkit-v1 board, a DHT11 temperature and humidity sensor, and a LCD1602 16x2 LCD screen to display the sensor readings for the user.
 The board also has a button for toggling between Farenheit and Celsius, and it hosts an internal HTTP server to displaying the readings on a local website.
+There is an onboard Potentiometer that can be used to adjust the screen contrast, if you want to use a static resistor instead, I find around 8.2Kohm works best.
 
 This project was developed in the Arduino IDE, and later imported into PlatformIO.
 
