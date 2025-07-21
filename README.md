@@ -29,7 +29,12 @@ The circuit:
  * Button to pin 34 (REQUIRES 3.3V, 5V will not work)
  * 10Kohm pulldown resistor for button to ground
 
+Here is a picture of the physical design on a breadboard. I have a power supply on one end that is only used to jump 5V to both power rails and the same effect can be had using jumper wires.
+The Dev board has an onboard voltage regulator that accepts 5V, and has a 3.3V output that you can use to wire up the button. This way you do not have to supply both 5V and 3.3V manually.
 ![Image of board](img/thermometer.jpg)
+
+Here is a picture of the website. It is made using very basic html, css, and js.
+![Image of website](img/ESP32_Weather_Report.png)
 
 Inside /kicad_files contains the kicad schematic and pcb files. You can reference these for how the pcb is assembled, however the gpio connections in the schematic are not the same
 as the connections defined in the code. This is because I changed the gpio pins for easier traces on the PCB design. If you're planning to build on a breadboard, use the pins defined in the code.
