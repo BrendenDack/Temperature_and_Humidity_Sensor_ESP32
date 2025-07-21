@@ -31,7 +31,7 @@
 #include <DHT11.h>
 #include <WiFi.h>
 #include <WebServer.h>
-#include <secret_keys.hpp>
+#include <secret_keys.h>
 
 // Function Declarations
 void handle_OnConnect();
